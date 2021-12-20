@@ -7,6 +7,11 @@
   Tuku Rruku!
 {% endif %}
 <h1>-> {{ kot }}</h1>
+<ul>
+    {% for project in projects %}
+      <li>{{ project.title }}</li>
+    {% endfor %}
+</ul>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea similique, cupiditate corrupti earum debitis explicabo dolorum maiores perspiciatis aliquid voluptas dolorem nobis impedit adipisci mollitia maxime accusamus ab nulla. Blanditiis.</p>
 {% endblock content %}
 
