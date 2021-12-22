@@ -15,7 +15,7 @@ def kot_view(request):
 def create_kot(request):
     form = KotForm()
     if request.method == 'POST':
-        form = KotForm(request.POST)
+        form = KotForm(request.POST, request.FILES)
         if(form.is_valid()):
             form.save()
             return redirect('kot')
@@ -28,7 +28,7 @@ def update_kot(request, pk):
     project = Project.objects.get(id=pk)
     form = KotForm(instance=project)
     if request.method == 'POST':
-        form = KotForm(request.POST, instance=project)
+        form = KotForm(request.POST, request.FILES, instance=project)
         if(form.is_valid()):
             form.save()
             return redirect('kot')

@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 {% block content %}
   <h1>Kot Form</h1>
-  <form action="" method="POST">
+  <form action="" method="POST" enctype="multipart/form-data">
     <div style="display: flex; flex-direction: column; width: 600px">
     {% csrf_token %}
     <!-- {{ form.as_p }} -->
